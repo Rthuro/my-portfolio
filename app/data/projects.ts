@@ -1,10 +1,9 @@
-export type ProjectCategory = 'development' | 'design' | 'motion';
 
 export interface Project {
   id: string;
   title: string;
   type?: string;
-  category: ProjectCategory;
+  category: string[];
   description: string;
   overview?: string;
   problem?: string;
@@ -50,7 +49,7 @@ export const developmentProjects: Project[] = [
     id: 'dev-project-1',
     title: 'HearEase',
     type: 'Thesis',
-    category: 'development',
+    category: ['web app', 'ai'],
     description: 'An AI-driven system employing Deep Neural Networks (DNN) to maximize barangay hearing schedules and forecast case resolution times.',
     overview: 'Built a complete e-commerce platform from the ground up, handling everything from database design to the checkout flow.',
     problem: 'As legal cases within Philippine communities grow in complexity, the need for effective barangay hearing scheduling becomes critical. Traditional scheduling techniques often suffer from flaws that lead to postponed hearings and unresolved cases.',
@@ -73,7 +72,7 @@ export const developmentProjects: Project[] = [
     id: 'dev-project-2',
     title: 'WMSU Sports Portal',
     type: 'Internship',
-    category: 'development',
+    category: ['web app'],
     description: 'A full-stack web application for managing sports events, tournaments, matches, and real-time scoring at Western Mindanao State University.',
     overview: 'This project was developed as part of the Practicum / Industry Immersion (CS 141) course at Western Mindanao State University (WMSU). It was built to digitize and modernize the sports event management and scoring operations and building the official public portal of the University Sports Development Office (USDO).',
     problem: 'The University Sports Development Office (USDO) lacked a centralized, modern system for managing sports events, tournaments, matches, real-time scoring and providing a public portal for the University sports office.',
@@ -100,7 +99,7 @@ export const developmentProjects: Project[] = [
   {
     id: 'dev-project-3',
     title: 'Pre-Service Teacher Portfolio Website',
-    category: 'development',
+    category: ['web app'],
     description: 'A portfolio website curated only for Client aesthetic.',
     overview: 'Client wanted a custom design suited her favorite aesthetic style and make it more responsive and interactive than simple canva and google site.',
     problem: 'Long paragraphs is not interactive enough to read and catches a few eyes.',
@@ -126,7 +125,7 @@ export const designProjects: Project[] = [
     id: 'design-project-1',
     type: 'Software Engineering',
     title: 'Repay',
-    category: 'design',
+    category: ['ux/ui', 'web app', 'mobile dev'],
     description: 'RePay offers a digital platform where borrowers can connect with and apply for loans from various licensed lenders. The platform simplifies the loan application process and provides borrowers with a centralized location to compare loan offers from different Cooperatives. For lenders, RePay acts as a marketing and customer acquisition channel, enabling them to reach a wider pool of potential borrowers and manage their loan portfolios efficiently.',
     overview: 'As the lead designer and developer, my role was to conceptualize, design, and develop a unified digital solution that seamlessly integrated both the lender and borrower experiences. The project involved a comprehensive design overhaul, transforming RePay into a modern, user-friendly platform, and a full-stack development process to build the robust backend and intuitive frontend that powers the application.',
     problem: 'The lending industry in the Philippines faces a significant challenge: many potential borrowers find it difficult to access loans from formal financial institutions. This challenge stems from several factors, including stringent collateral requirements, complex application processes, and limited accessibility for individuals in remote or underserved communities. These barriers often force individuals to turn to informal lenders, who may charge exorbitant interest rates and exploit borrowers’ financial vulnerabilities.',
@@ -157,7 +156,7 @@ export const designProjects: Project[] = [
     id: 'design-project-2',
     type: 'Freelance',
     title: 'Kindiverse',
-    category: 'design',
+    category: ['ux/ui', 'game dev'],
     description: 'Kindiverse is a storytelling-based educational app for young children ages 3–8 that encourages play-based learning by allowing them to explore fictional worlds influenced by realworld cultures. This helps them to improve their emotional intelligence, global awareness, and basic skills.',
     overview: 'Through interactive storytelling and captivating activities like puzzles, counting, songs, words, colors, and activities, the platform leverages digital technologies, including computers and mobile devices, to deliver engaging and developmentally appropriate content. It also promotes cultural awareness and global citizenship by exposing children to stories and activities rooted in global traditions, folklore, and festivals, which gives them a broad understanding of various cultures and teaches them to respect and value diversity.',
     problem: 'Young children need developmentally appropriate digital learning tools that make literacy and numeracy skills fun and easy to learn. Parents and educators struggle to find engaging, screen-based resources that go beyond rote memorization, incorporating storytelling, interactive play, and cultural exposure in a safe, age-appropriate environment. Existing apps often lack high-quality visuals, varied activities, or cultural depth, making it difficult for children to stay engaged while learning foundational concepts. Additionally, many tools fail to balance educational content with entertaining elements, resulting in passive screen time rather than active, joyful learning that supports holistic child development.',
@@ -177,7 +176,7 @@ export const designProjects: Project[] = [
   {
     id: 'design-project-3',
     title: 'SignSpeak',
-    category: 'design',
+    category: ['ux/ui', 'web app'],
     description: 'SignSpeak is an AI-powered translation tool designed to bridge communication gaps between deaf, hard-of-hearing, mute individuals, and non-signers.',
     overview: 'The tool uses computer vision and machine learning to capture American Sign Language (ASL) gestures via a webcam and translate them into real-time English subtitles. Additionally, it features a voice-to-text function, allowing deaf users to understand spoken dialogue. By supporting both ASL-to-text and voice-to-text translation, SignSpeak ensures seamless communication between deaf and non-deaf individuals during online interactions, making virtual meetings, classes, and interviews more inclusive.',
     problem: 'Despite significant advances in communication technology, deaf and hard-of-hearing individuals continue to face substantial barriers in everyday interactions. In professional settings like virtual meetings and interviews, the absence of sign language interpretation often excludes deaf employees from fully participating in discussions. Similarly, students who rely on sign language may struggle to keep up with lectures and spoken-language content in online classes. These communication gaps limit accessibility, create feelings of isolation, and hinder equal opportunities for deaf and hard-of-hearing individuals to engage, express themselves, and contribute fully in both academic and professional environments.',
@@ -194,34 +193,33 @@ export const designProjects: Project[] = [
   },
 ];
 
-export const motionProjects: Project[] = [
-  {
-    id: 'motion-project-1',
-    title: 'HearEase',
-    category: 'motion',
-    description: 'A short presentation of our thesis \'HearEase\' an AI-driven system employing Deep Neural Networks (DNN) to maximize barangay hearing schedules and forecast case resolution times.',
-    tools: ['CapCut'],
-    image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786562478/12b56ebe-3d1c-47d1-b746-1b0e459b4e9b.png',
-    video: 'https://res.cloudinary.com/rdnkuxzj/video/upload/v1786561327/hearease.mp4',
-    role: 'Motion Designer',
-    isFeatured: false,
-  }, {
-    id: 'motion-project-1',
-    title: 'Curriculum Vitae Video',
-    category: 'motion',
-    description: 'A short presentation for my brother\'s CV video for his requirement.',
-    tools: ['CapCut'],
-    image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786562478/12b56ebe-3d1c-47d1-b746-1b0e459b4e9b.png',
-    video: 'https://res.cloudinary.com/rdnkuxzj/video/upload/v1786561327/hearease.mp4',
-    role: 'Motion Designer',
-    isFeatured: false,
-  }
-];
+// export const motionProjects: Project[] = [
+//   {
+//     id: 'motion-project-1',
+//     title: 'HearEase',
+//     category: 'motion',
+//     description: 'A short presentation of our thesis \'HearEase\' an AI-driven system employing Deep Neural Networks (DNN) to maximize barangay hearing schedules and forecast case resolution times.',
+//     tools: ['CapCut'],
+//     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786562478/12b56ebe-3d1c-47d1-b746-1b0e459b4e9b.png',
+//     video: 'https://res.cloudinary.com/rdnkuxzj/video/upload/v1786561327/hearease.mp4',
+//     role: 'Motion Designer',
+//     isFeatured: false,
+//   }, {
+//     id: 'motion-project-1',
+//     title: 'Curriculum Vitae Video',
+//     category: 'motion',
+//     description: 'A short presentation for my brother\'s CV video for his requirement.',
+//     tools: ['CapCut'],
+//     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786562478/12b56ebe-3d1c-47d1-b746-1b0e459b4e9b.png',
+//     video: 'https://res.cloudinary.com/rdnkuxzj/video/upload/v1786561327/hearease.mp4',
+//     role: 'Motion Designer',
+//     isFeatured: false,
+//   }
+// ];
 
 export const allProjects: Project[] = [
   ...developmentProjects,
   ...designProjects,
-  ...motionProjects,
 ];
 
 export const featuredProjects: Project[] = allProjects.filter((p) => p.isFeatured);

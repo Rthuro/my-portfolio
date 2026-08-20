@@ -7,15 +7,17 @@ interface CardProps{
     proj: typeof featuredProjects[0];
     index?: number;
 }
+import Link from 'next/link';
 
 export const Card = ({proj, index = 0} : CardProps) => {
 
     return (
         <motion.div
          initial={{ opacity: 0, y: 30 }}
-         animate={{ opacity: 1, y: 0 }}
+         whileInView={{ opacity: 1, y: 0 }}
          transition={{ duration: 0.5, delay: index * 0.15, ease: 'easeOut' }}
-         className='flex flex-col md:w-[800px] w-[90vw] text-zinc-100 group'>
+        >
+            <Link href={`/projects/${proj.id}`}  className='flex flex-col md:w-[800px] w-[90vw] text-zinc-100 group select-none' >
             <div className="overflow-hidden rounded-lg relative">
                 <img
                     src={proj.image}
@@ -38,7 +40,7 @@ export const Card = ({proj, index = 0} : CardProps) => {
                 )}
 
             </div>
-             
+            </Link>            
         </motion.div>
     );
 };

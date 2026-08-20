@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { IconLaptop, IconFileContentFill24, IconEnvelope, IconGithub, IconLinkedin } from "./assets/icons";
-import { featuredProjects } from "./data/projects";
-import { Card } from "./components/Card";
+import { ProjectCarousel } from "./components/ProjectCarousel";
 import GithubContribution from "./components/GithubContribution";
 import { SectionHeader } from "./components/SectionHeader";
 import { Section } from "./components/Section";
@@ -24,7 +23,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 border-y border-zinc-900 py-3 ">
-          <button className="py-2 bg-zinc-50 text-zinc-800 font-medium flex items-center justify-center gap-1 rounded-lg  text-sm font-medium">
+          <button className="py-2 bg-zinc-50 text-zinc-800 font-medium flex items-center justify-center gap-1 rounded-lg  text-sm outline outline-zinc-600 border ">
             <IconFileContentFill24 size="16px" color="#ffb900" />
             My resume
           </button>
@@ -48,18 +47,12 @@ export default function Home() {
         children={<BlogList location="home" />}
       />
 
-      <section className="flex flex-col items-center gap-4 overflow-hidden w-full">
+      <section className="flex flex-col items-center gap-4 overflow-hidden w-full ">
         <Section
           header={<SectionHeader title="02 - Projects" link="/projects" />
           }
         />
-        <div className="overflow-x-auto w-[calc(100vw-3rem)] scrollbar-none text-sm">
-          <div className="flex gap-2 w-fit md:px-6">
-            {featuredProjects.map((proj, idx) => (
-              <Card key={idx} index={idx} proj={proj} />
-            ))}
-          </div>
-        </div>
+        <ProjectCarousel />
       </section>
 
       <Section
@@ -94,7 +87,7 @@ export default function Home() {
       <Section
         header={<SectionHeader title="07 - Contact" link="" hasSectionLink={false} />}
         children={
-          <div className="flex flex-col items-center justify-center py-12 rounded-xl gap-3 border border-zinc-800 w-full bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(255,255,255,0.04)_4px,transparent_9px)] shadow-md shadow-accent-dark/20">
+          <div className="flex flex-col items-center justify-center py-12 rounded-xl gap-3 border border-zinc-800 w-full  bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(255,255,255,0.04)_4px,transparent_9px)] shadow-md shadow-accent-dark/20">
             <p className="text-xl font-semibold">Open for Freelance Work</p>
             <p className="text-zinc-400 text-xs text-center">Full Stack Development | Web Design | Web Development</p>
             <Link href="/freelance" className="flex items-center justify-center gap-2 font-mono rounded-lg  text-sm font-semibold bg-zinc-200 py-2 px-4 text-zinc-900 outline outline-zinc-700 border mt-6 cursor-pointer">
