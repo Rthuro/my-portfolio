@@ -1,7 +1,7 @@
 
 interface PageHeadersProps{
-    title: string;
-    subtitle: string;
+    title?: string;
+    subtitle?: string;
 } 
 
 export const PageHeaders = ({title, subtitle}: PageHeadersProps) => {

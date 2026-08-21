@@ -46,7 +46,7 @@ export interface Skill {
 
 export const developmentProjects: Project[] = [
   {
-    id: 'dev-project-1',
+    id: 'hearease',
     title: 'HearEase',
     type: 'Thesis',
     category: ['web app', 'ai'],
@@ -69,7 +69,7 @@ export const developmentProjects: Project[] = [
     isFeatured: true,
   },
   {
-    id: 'dev-project-2',
+    id: 'wmsu-sports-portal',
     title: 'WMSU Sports Portal',
     type: 'Internship',
     category: ['web app'],
@@ -97,7 +97,7 @@ export const developmentProjects: Project[] = [
     isFeatured: true,
   },
   {
-    id: 'dev-project-3',
+    id: 'portfolio',
     title: 'Pre-Service Teacher Portfolio Website',
     category: ['web app'],
     description: 'A portfolio website curated only for Client aesthetic.',
@@ -122,11 +122,11 @@ export const developmentProjects: Project[] = [
 
 export const designProjects: Project[] = [
   {
-    id: 'design-project-1',
+    id: 'repay',
     type: 'Software Engineering',
     title: 'Repay',
     category: ['ux/ui', 'web app', 'mobile dev'],
-    description: 'RePay offers a digital platform where borrowers can connect with and apply for loans from various licensed lenders. The platform simplifies the loan application process and provides borrowers with a centralized location to compare loan offers from different Cooperatives. For lenders, RePay acts as a marketing and customer acquisition channel, enabling them to reach a wider pool of potential borrowers and manage their loan portfolios efficiently.',
+    description: 'RePay offers a digital platform where borrowers can connect with and apply for loans from various licensed lenders. The platform simplifies the loan application process and provides borrowers with a centralized location to compare loan offers from different Cooperatives. RePay acts as a marketing and customer acquisition channel, enabling them to reach a wider pool of potential borrowers and manage their loan portfolios efficiently.',
     overview: 'As the lead designer and developer, my role was to conceptualize, design, and develop a unified digital solution that seamlessly integrated both the lender and borrower experiences. The project involved a comprehensive design overhaul, transforming RePay into a modern, user-friendly platform, and a full-stack development process to build the robust backend and intuitive frontend that powers the application.',
     problem: 'The lending industry in the Philippines faces a significant challenge: many potential borrowers find it difficult to access loans from formal financial institutions. This challenge stems from several factors, including stringent collateral requirements, complex application processes, and limited accessibility for individuals in remote or underserved communities. These barriers often force individuals to turn to informal lenders, who may charge exorbitant interest rates and exploit borrowers’ financial vulnerabilities.',
     process: 'I conducted a thorough analysis of existing lending platforms, identifying common pain points for both lenders and borrowers. This research formed the foundation of my design strategy, guiding me in creating a solution that addressed these critical needs.',
@@ -153,7 +153,7 @@ export const designProjects: Project[] = [
     isFeatured: true,
   },
   {
-    id: 'design-project-2',
+    id: 'kindiverse',
     type: 'Freelance',
     title: 'Kindiverse',
     category: ['ux/ui', 'game dev'],
@@ -161,7 +161,12 @@ export const designProjects: Project[] = [
     overview: 'Through interactive storytelling and captivating activities like puzzles, counting, songs, words, colors, and activities, the platform leverages digital technologies, including computers and mobile devices, to deliver engaging and developmentally appropriate content. It also promotes cultural awareness and global citizenship by exposing children to stories and activities rooted in global traditions, folklore, and festivals, which gives them a broad understanding of various cultures and teaches them to respect and value diversity.',
     problem: 'Young children need developmentally appropriate digital learning tools that make literacy and numeracy skills fun and easy to learn. Parents and educators struggle to find engaging, screen-based resources that go beyond rote memorization, incorporating storytelling, interactive play, and cultural exposure in a safe, age-appropriate environment. Existing apps often lack high-quality visuals, varied activities, or cultural depth, making it difficult for children to stay engaged while learning foundational concepts. Additionally, many tools fail to balance educational content with entertaining elements, resulting in passive screen time rather than active, joyful learning that supports holistic child development.',
     process: 'Conducted user research and competitive analysis and created a comprehensive design system for the entire app.',
-    tools: ['Figma', 'Principle'],
+    features: [
+      'Interactive Cultural World / Map: Interactive map containing multiple imaginary islands or “cultural lands.” Each island represents a different region or cultural theme.', 'Interactive Storytelling: Each island has its own story connected to the traditions, folklore, and customs of its represented culture.', 
+      'Educational Games and Mini-Games: After completing or reading a storyline, children can participate in educational activities related to the island\'s story and culture.', 
+      'Language Learning: Each island includes language-learning activities where children interact with characters and complete language challenges.', 
+      'Voice Input: Children can provide spoken answers for the activities.'],
+    tools: ['Figma'],
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
     images: [
       'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
@@ -174,14 +179,25 @@ export const designProjects: Project[] = [
     isFeatured: true,
   },
   {
-    id: 'design-project-3',
+    id: 'signspeak',
     title: 'SignSpeak',
     category: ['ux/ui', 'web app'],
     description: 'SignSpeak is an AI-powered translation tool designed to bridge communication gaps between deaf, hard-of-hearing, mute individuals, and non-signers.',
     overview: 'The tool uses computer vision and machine learning to capture American Sign Language (ASL) gestures via a webcam and translate them into real-time English subtitles. Additionally, it features a voice-to-text function, allowing deaf users to understand spoken dialogue. By supporting both ASL-to-text and voice-to-text translation, SignSpeak ensures seamless communication between deaf and non-deaf individuals during online interactions, making virtual meetings, classes, and interviews more inclusive.',
     problem: 'Despite significant advances in communication technology, deaf and hard-of-hearing individuals continue to face substantial barriers in everyday interactions. In professional settings like virtual meetings and interviews, the absence of sign language interpretation often excludes deaf employees from fully participating in discussions. Similarly, students who rely on sign language may struggle to keep up with lectures and spoken-language content in online classes. These communication gaps limit accessibility, create feelings of isolation, and hinder equal opportunities for deaf and hard-of-hearing individuals to engage, express themselves, and contribute fully in both academic and professional environments.',
     process: 'To address these communication barriers, I developed SignSpeak, a dual-function translation tool that supports both ASL-to-English and voice-to-text translation. The project involved extensive research into real-time machine learning models and computer vision techniques for gesture recognition. I designed a user-centric interface that allows for seamless switching between translation modes, ensuring that deaf or hard-of-hearing users can engage naturally in conversations.',
-    tools: ['Figma', 'Miro', 'Hotjar'],
+    features: [
+      "Real-Time ASL Recognition : Recognizes American Sign Language (ASL) gestures in real time, with inference running locally in the browser.",
+      "Speech-to-Text Captioning : Uses the Web Speech API to transcribe spoken audio into real-time text captions.",
+      "Adaptive Caption Display : Determines which type of subtitles to display based on the user’s profile or preferences, such as ASL-to-text for hearing users and voice-to-text for deaf or hard-of-hearing users.",
+      "Real-Time Caption Overlay : Displays recognized and transcribed text as captions over the video meeting interface.",
+      "Chat-Like Caption Format : Groups captions into timestamped chat-style messages with labels indicating whether they originated from voice or sign language.",
+      "Caption Mode Selection : Allows users to choose the communication support mode they prefer during meetings.",
+      "Sign-to-Text Only : Translates ASL gestures captured through the webcam into on-screen captions.",
+      "Voice-to-Text Only : Transcribes audio captured from the microphone and displays it as text captions.",
+      "Both Sign + Voice to Text : Processes both ASL and voice inputs simultaneously and displays them as real-time captions."
+    ],
+    tools: ['Figma'],
     image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
     images: [
       'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',

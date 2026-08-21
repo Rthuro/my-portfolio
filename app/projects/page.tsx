@@ -19,33 +19,17 @@ export default function Projects() {
                 <PageHeaders title="Projects" subtitle="A collection of projects I've worked on." />
             }
             children={
-                <div className="grid grid-cols-1 gap-6 ">
+                <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
                     {allProjects.map((project, index) => (
-                        <div key={index}  className="flex flex-col">
-                            <img src={project.image} alt="" className="h-[280px] w-full object-cover object-top rounded-t-xl opacity-90 z-10" />
-                           <div className="flex flex-col gap-2 py-6 px-4 rounded-xl border border-zinc-800 bg-zinc-900 shadow-xl -mt-8 z-10">
+                        <Link href={`/projects/${project.id}`} key={index}  className="flex flex-col">
+                            <img src={project.image} alt="" className="h-64 w-full object-cover object-top rounded-t-xl opacity-90 z-10" />
+                           <div className="flex flex-col gap-2 py-6 px-4 rounded-b-xl border border-zinc-800 bg-zinc-900 shadow-xl -mt-8 z-10">
                                 <p className="text-xs text-zinc-400 tracking-widest font-mono">{project.category.join(" · ").toLocaleUpperCase()}</p>
                                 <p className="text-lg font-mono font-medium ">{project.title}</p>
-                                <p className="text-xs text-justify">{project.description}</p>
-                                {project.links && (
-                                    <div className="flex items-center gap-4 mt-3">
-                                        {project.links.github && (
-                                            <Link className="flex-1 flex items-center justify-center gap-2 bg-zinc-900 border-t border-zinc-700 outline outline-zinc-950 rounded-lg px-2 py-3 text-sm font-medium" href={project.links.github} target="_blank">
-                                                <IconGithub size={"14px"} />
-                                                GitHub
-                                            </Link>
-                                        )}
-                                        {project.links.live && (
-                                            <Link className="flex-1 flex items-center justify-center gap-2 bg-zinc-50 rounded-lg px-2 py-3 text-zinc-900 text-sm font-medium" href={project.links.live} target="_blank">
-                                                <Globe size={14} />
-                                                Live
-                                            </Link>
-                                        )}
-                                    </div>
-                                )}
-
+                                <p className="text-xs text-justify line-clamp-4">{project.description}</p>
+                                
                             </div> 
-                        </div>
+                        </Link>
                         
                     ))}
                 </div>

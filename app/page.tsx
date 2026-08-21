@@ -23,14 +23,13 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-2 border-y border-zinc-900 py-3 ">
-          <button className="py-2 bg-zinc-50 text-zinc-800 font-medium flex items-center justify-center gap-1 rounded-lg  text-sm outline outline-zinc-600 border ">
-            <IconFileContentFill24 size="16px" color="#ffb900" />
+          <a href="/resume.pdf" target="_blank" className="cursor-pointer py-2 bg-zinc-50 text-zinc-800 font-medium flex items-center justify-center gap-1 rounded-lg  text-sm outline outline-zinc-600 border ">            <IconFileContentFill24 size="16px" color="#ffb900" />
             My resume
-          </button>
-          <button className="py-3 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-1 rounded-lg hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-600">
+          </a>
+          <Link href="/contact?emailType=general" className="py-3 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-1 rounded-lg hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-600">
             <IconEnvelope size="16px" />
             Email me
-          </button>
+          </Link>
           <Link target="_blank" className="text-sm text-zinc-400 py-3 text-center border border-zinc-800 rounded-lg font-mono border-dashed flex items-center justify-center gap-1" href={"https://github.com/Rthuro"}>
             <IconGithub size="16px" />
             Github
@@ -90,7 +89,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center py-12 rounded-xl gap-3 border border-zinc-800 w-full  bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(255,255,255,0.04)_4px,transparent_9px)] shadow-md shadow-accent-dark/20">
             <p className="text-xl font-semibold">Open for Freelance Work</p>
             <p className="text-zinc-400 text-xs text-center">Full Stack Development | Web Design | Web Development</p>
-            <Link href="/freelance" className="flex items-center justify-center gap-2 font-mono rounded-lg  text-sm font-semibold bg-zinc-200 py-2 px-4 text-zinc-900 outline outline-zinc-700 border mt-6 cursor-pointer">
+            <Link href="/contact?emailType=freelance" className="flex items-center justify-center gap-2 font-mono rounded-lg  text-sm font-semibold bg-zinc-200 py-2 px-4 text-zinc-900 outline outline-zinc-700 border mt-6 cursor-pointer">
               <IconEnvelope size="16px" color="#ffff" />
               Send me an email
             </Link>
