@@ -1,4 +1,4 @@
-
+'use client'
 import { useSearchParams } from "next/navigation"
 import { PageLayout } from "../components/PageLayout"
 import { PageHeaders } from "../components/PageHeaders"
