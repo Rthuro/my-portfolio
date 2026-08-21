@@ -17,11 +17,11 @@ const ASCII_ART = `
 
 export function Footer() {
     return (
-        <div className="flex items-center justify-between my-24 mx-auto">
+        <div className="flex items-center justify-between mt-32 mb-24  mx-auto">
         
          <pre className="ascii-art" aria-hidden="true" >
-        {ASCII_ART}
-      </pre>
+          {ASCII_ART}
+        </pre>
         </div>
     )
 }

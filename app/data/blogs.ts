@@ -5,12 +5,12 @@ interface Blog {
     date: string;
     tags: string[];
     image: string;
-    link: string;
+    link?: string;
     isFeatured: boolean;
     text: React.ReactNode;
 }
 
-export const Blogs : Blog[] = [
+export const blogs : Blog[] = [
     {
         title: 'Web Gems',
         slug: 'web-gems',

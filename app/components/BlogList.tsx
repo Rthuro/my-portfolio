@@ -1,14 +1,15 @@
 'use client'
 import {motion} from "framer-motion"
-import { Blogs } from "../data/blogs";
+import { blogs } from "../data/blogs";
 import { BlogCard } from "./BlogCard";
+import Link from "next/link";
 
 interface BlogsProps {
     location: 'home' | 'blogs';
 }
 
 export const BlogList = ({location}: BlogsProps) => {
-    const blogArr  = location === 'home' ? Blogs.filter(blog => blog.isFeatured) : Blogs;  
+    const blogArr  = location === 'home' ? blogs.filter(blog => blog.isFeatured) : blogs;  
     const limit = blogArr.slice(0, 5);
 
     const listMotion = {
@@ -22,7 +23,7 @@ export const BlogList = ({location}: BlogsProps) => {
     };
 
     return (
-        <section className="border-t border-zinc-900 flex flex-col w-full ">
+        <section className="flex flex-col w-full ">
             {location == 'home' ? (
                 <motion.div
                 variants={listMotion}
@@ -45,7 +46,18 @@ export const BlogList = ({location}: BlogsProps) => {
                 </motion.div>
             ))}
             </motion.div>
-            ): ''}
+            ):  (
+                <div className="grid grid-cols-2 gap-6 ">
+                    {blogArr.map( (blog, index) => (
+                        <Link href={`/blogs/${blog.slug}`} key={index} className=" flex flex-col gap-2 group">
+                            <img src={blog.image} alt="" className="w-full h-[150px] object-cover rounded-xl border group-hover:opacity-80 transition-all duration-300" />
+                            <p className="text-xs text-zinc-400 font-mono mt-2">{blog.date}</p>
+                            <p className="text-lg font-semibold group-hover:text-zinc-400 ">{blog.title}</p>
+                            <p className="text-xs text-justify text-zinc-400 ">{blog.description}</p>
+                        </Link>
+                    ))}
+                </div>
+            )}
             
         </section>
     );

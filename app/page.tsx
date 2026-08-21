@@ -13,7 +13,7 @@ import { ExperienceList } from "./components/ExperienceList";
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center text-zinc-200 gap-24 ">
-      <section className="w-[90%] md:w-[40%] mx-auto flex flex-col  mt-12  gap-6">
+      <section className="w-[90%] md:w-[40%] mx-auto flex flex-col  mt-24  gap-6">
         <div className="flex flex-col gap-2">
           <p className=" font-semibold text-lg flex items-center gap-1">
             <IconLaptop size="16px" color="#ffff" />

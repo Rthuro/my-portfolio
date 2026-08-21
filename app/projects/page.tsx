@@ -6,8 +6,7 @@ import { IconGithub } from "../assets/icons";
 import { Globe } from "lucide-react";
 
 export default function Projects() {
-    return <div className="flex flex-col gap-5 text-zinc-100">
-        <PageLayout
+    return <PageLayout
             socialLinks={<>
                 <Link target="_blank" href={"https://github.com/Rthuro"} className="p-2 rounded-lg bg-surface border border-zinc-800 hover:bg-zinc-900">
                     <IconGithub size="16px" />
@@ -52,6 +51,5 @@ export default function Projects() {
                 </div>
             }
         >
-        </PageLayout>
-    </div>
+    </PageLayout>
 }
