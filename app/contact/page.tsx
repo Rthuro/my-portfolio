@@ -8,10 +8,14 @@ import { MailCheck, MailQuestionMark } from "lucide-react"
 const inputStyle = "outline-none focus:ring-1 focus:ring-accent-amber-500/80 focus:border-accent-amber-500/80  border border-zinc-800 p-2 rounded-lg bg-zinc-800 text-sm placeholder:text-zinc-500"
 
 export default function Contact() {
-    const searchParams = useSearchParams()
-    const [type, setType] = useState<'freelance' | 'general'>(
-        (searchParams.get('emailType') as 'freelance' | 'general')
-    )
+    const searchParams = useSearchParams();
+
+    const emailType = searchParams.get("emailType");
+
+    const [type, setType] = useState<"freelance" | "general">(
+    emailType === "freelance" ? "freelance" : "general"
+    );
+    
     const [loader, setLoader] = useState(false)
     const [success, setSuccess] = useState(false)
     const [error, setError] = useState({
