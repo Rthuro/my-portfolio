@@ -18,7 +18,7 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
             <div className="flex gap-0.5 ">
                 {images.map((img, idx) => (
                     <div className="flex-[0_0_auto] h-auto" key={idx}>
-                        <img src={img} alt={img} className=" w-[40vw] h-auto object-cover" />
+                        <img src={img} alt={img} className="w-[80vw] md:w-[40vw] h-auto object-cover" />
                     </div> 
                 ))}
             </div>
