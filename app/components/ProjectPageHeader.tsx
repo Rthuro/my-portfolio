@@ -7,11 +7,11 @@ interface PageHeadersProps{
     tools: string[];
 } 
 
-export const ProjectPageHeader = ({image, title, role, description, tools}: PageHeadersProps) => {
+export const ProjectPageHeader = ({ image, title, role, description, tools }: PageHeadersProps) => {
 
     return <div className="flex flex-col gap-2">
         {image && (
-            <img src={image} alt={title} className="w-full h-[280px] object-cover object-top rounded-xl mb-6" />
+            <img src={image} alt={title} className="w-full h-[400px] object-cover object-top rounded-xl mb-6" />
         )}
         <p className="text-xs text-zinc-400 font-mono">{role}</p>
         <p className=" font-semibold text-5xl flex items-center">

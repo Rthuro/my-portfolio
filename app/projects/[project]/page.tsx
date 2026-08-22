@@ -4,6 +4,7 @@ import { ProjectPageHeader } from "@/app/components/ProjectPageHeader";
 import Link from "next/link";
 import { Globe } from "lucide-react";
 import { IconGithub } from "@/app/assets/icons";
+import { ImageCarousel } from "@/app/components/ImageCarousel";
 
 interface ProjectPageProps {
     params: Promise<{ project: string }>
@@ -21,7 +22,7 @@ export default async function ProjectPage({ params, }: ProjectPageProps) {
                 </>
             }
             children={
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-8">
                     {project?.links && (
                         <div className="flex items-center gap-4 border-t border-zinc-800 pt-4">
                             {project.links.github && (
@@ -40,13 +41,23 @@ export default async function ProjectPage({ params, }: ProjectPageProps) {
                     )}
 
                     <div className="flex flex-col gap-2">
-                        <p className="text-lg text-zinc-200 font-medium pt-4 border-t border-zinc-800">
+                        <p className="text-lg text-zinc-200 font-medium pt-4">
                             Overview
                         </p>
                         <p className="text-zinc-400 text-justify ">{project?.overview}</p>
                     </div>
+
+                    {project?.images && (
+                        <div className="flex flex-col">
+                            <p className="text-lg text-zinc-200 mb-2">
+                                Gallery
+                            </p>
+                            <ImageCarousel images={project.images} />
+                        </div>
+                    )}
+
                     <div className="flex flex-col">
-                        <p className=" text-zinc-200 mb-2">
+                        <p className="text-lg text-zinc-200 mb-2">
                             Features
                         </p>
                         {project?.features?.map((feature, fIdx) => (
