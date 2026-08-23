@@ -63,6 +63,9 @@ export const developmentProjects: Project[] = [
     ],
     techStack: ['AI Integration','React', ' Django REST', 'Supabase', 'PostgreSQL ', 'Firebase Auth', 'Tailwind CSS', 'Resend API', 'Android SMS Gateway'],
     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786627216/screencapture-hearease-me-2026-08-13-21_15_36.png',
+    images: [
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786627216/screencapture-hearease-me-2026-08-13-21_15_36.png',
+    ]
     role: 'Full-Stack Developer',
     outcome: 'Architected and developed the full-stack web application (React/Vite, Django REST Framework, PostgreSQL/Supabase) as the primary contributor (˜91% of commits), delivering digital case management, role-based access control with Firebase Auth, automated document generation, and an analytics dashboard.',
     links: { github: 'https://github.com/Rthuro/HearEase', live: 'https://www.hearease.me/' },
@@ -113,7 +116,7 @@ export const developmentProjects: Project[] = [
       'Drive Preview Frame',
     ],
     techStack: ['React', 'React Bits', 'TailwindCSS', 'Framer Motion', 'Vercel', 'Undraw Assets'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80',
+    image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787471169/rain-1.png',
     role: 'Full-Stack Developer',
     links: { live: 'https://leesha-rane-benito-portfolio.vercel.app/' },
     isFeatured: false,
@@ -144,6 +147,10 @@ export const designProjects: Project[] = [
     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786979264/repay-1.png',
     images: [
       'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449810/repay.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787470834/repay-3.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787470835/repay-5.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787470835/repay-4.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787470834/repay-2.png'
     ],
     role: 'UI/UX Designer',
     outcome: 'Proposed UI/UX design was approved by the panelist on initial project defense of Software Engineering Course Final Project and can proceed to the actual development',
