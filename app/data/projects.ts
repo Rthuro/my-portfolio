@@ -143,9 +143,7 @@ export const designProjects: Project[] = [
     tools: ['Figma'],
     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786979264/repay-1.png',
     images: [
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
-      'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80',
-      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449810/repay.png',
     ],
     role: 'UI/UX Designer',
     outcome: 'Proposed UI/UX design was approved by the panelist on initial project defense of Software Engineering Course Final Project and can proceed to the actual development',
@@ -202,10 +200,11 @@ export const designProjects: Project[] = [
       "Both Sign + Voice to Text : Processes both ASL and voice inputs simultaneously and displays them as real-time captions."
     ],
     tools: ['Figma'],
-    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+    image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449844/signspeak-4.png',
     images: [
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449871/signspeak-1.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449887/signspeak-2.png',
+      'https://res.cloudinary.com/rdnkuxzj/image/upload/v1787449898/signspeak-3.png',
     ],
     role: 'UI/UX Designer',
     outcome: 'Client achieved a top 1.5 final presentation grade',
