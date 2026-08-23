@@ -21,11 +21,11 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
             <div className="overflow-hidden w-full text-sm pt-0" ref={emblaRef}>
                 <div className="flex gap-0.5 ">
                     {images.map((img, idx) => (
-                        <div className="relative flex-[0_0_auto] h-auto group" key={idx}>
+                        <div className="relative flex-[0_0_auto] h-auto" key={idx}>
                             <button type='button' 
                             onClick={() => setPreviewImage(img)}
-                            className="absolute top-2 right-2 p-2 bg-zinc-800/80 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                                <Maximize2 size={16} />
+                            className="absolute top-2 right-2 p-2 bg-zinc-800/80 text-white rounded">
+                                <Maximize2 size={14} />
                             </button>
                             <img src={img} alt={img} className="w-[350px] md:h-[400px] h-auto object-cover" />
                         </div> 
