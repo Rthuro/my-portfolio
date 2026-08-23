@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="flex flex-col items-center gap-4 w-full">
         <Section
-          header={<SectionHeader title="04 - Tech Stack" link="/stack" />}
+          header={<SectionHeader title="04 - Tech Stack" link="/stack" hasSectionLink={false} />}
         />
         <TechStack />
       </section>

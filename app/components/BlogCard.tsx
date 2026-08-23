@@ -5,10 +5,10 @@ interface BlogProps {
     date: string;
     description: string;
     location: string;
-    slug: string;
+    link:string;
 }
 
-export function BlogCard({title, date, description, location, slug}: BlogProps) {
+export function BlogCard({title, date, description, location, link}: BlogProps) {
     const formatDate = new Date(date).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'short',
@@ -16,7 +16,7 @@ export function BlogCard({title, date, description, location, slug}: BlogProps) 
     return (
         <>
         {location == 'home' ? (
-            <Link href={`/blogs/${slug}`} className="w-full flex justify-between items-center border-b border-zinc-900 py-4 px-2 hover:bg-zinc-900">
+            <Link href={link} className="w-full flex justify-between items-center border-b border-zinc-900 py-4 px-2 hover:bg-zinc-900">
                 <div className="flex flex-col gap-2 flex-1">
                     <p className="font-semibold">
                         {title}

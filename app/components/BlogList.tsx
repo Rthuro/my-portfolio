@@ -41,7 +41,7 @@ export const BlogList = ({location}: BlogsProps) => {
                         date={blog.date}
                         description={blog.description}
                         location={location}
-                        slug={blog.slug}
+                        link={blog.link ?? blog.slug}
                     />
                 </motion.div>
             ))}
@@ -49,7 +49,7 @@ export const BlogList = ({location}: BlogsProps) => {
             ):  (
                 <div className="grid grid-cols-2 gap-6 ">
                     {blogArr.map( (blog, index) => (
-                        <Link href={`/blogs/${blog.slug}`} key={index} className=" flex flex-col gap-2 group">
+                        <Link href={blog.link ?? blog.slug} key={index} className=" flex flex-col gap-2 group">
                             <img src={blog.image} alt="" className="w-full h-[150px] object-cover rounded-xl border group-hover:opacity-80 transition-all duration-300" />
                             <p className="text-xs text-zinc-400 font-mono mt-2">{blog.date}</p>
                             <p className="text-lg font-semibold group-hover:text-zinc-400 ">{blog.title}</p>

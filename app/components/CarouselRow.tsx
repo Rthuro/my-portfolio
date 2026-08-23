@@ -47,8 +47,8 @@ export const CarouselRow = ({ items, direction = "left", duration = 35 }: Carous
                         flex items-center gap-2
             "
                     >
-                        <img src={item.icon} alt={item.label} className="size-5" />
-                        <p>{item.label}</p>
+                        <img src={item.icon} alt={item.label} className="size-3 md:size-5" />
+                        <p className="text-xs md:text-md">{item.label}</p>
                     </div>
                 ))}
             </motion.div>
