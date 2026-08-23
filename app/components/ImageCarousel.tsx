@@ -27,7 +27,7 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
                             className="absolute top-2 right-2 p-2 bg-zinc-800/80 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                 <Maximize2 size={16} />
                             </button>
-                            <img src={img} alt={img} className="w-[80vw] md:w-[40vw] h-auto object-cover" />
+                            <img src={img} alt={img} className="w-[350px] md:h-[400px] h-auto object-cover" />
                         </div> 
                     ))}
                 </div>
