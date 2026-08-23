@@ -65,7 +65,7 @@ export const developmentProjects: Project[] = [
     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786627216/screencapture-hearease-me-2026-08-13-21_15_36.png',
     images: [
       'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786627216/screencapture-hearease-me-2026-08-13-21_15_36.png',
-    ]
+    ],
     role: 'Full-Stack Developer',
     outcome: 'Architected and developed the full-stack web application (React/Vite, Django REST Framework, PostgreSQL/Supabase) as the primary contributor (˜91% of commits), delivering digital case management, role-based access control with Firebase Auth, automated document generation, and an analytics dashboard.',
     links: { github: 'https://github.com/Rthuro/HearEase', live: 'https://www.hearease.me/' },
