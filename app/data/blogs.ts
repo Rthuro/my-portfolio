@@ -1,6 +1,6 @@
 interface Blog {
     title: string;
-    slug: string;
+    id: string;
     description: string;
     date: string;
     tags: string[];
@@ -13,7 +13,7 @@ interface Blog {
 export const blogs : Blog[] = [
     {
         title: 'Web Gems',
-        slug: 'web-gems',
+        id: 'web-gems',
         description: 'List of websites i found helpful as an aspiring designer and developer👩🏻‍💻.',
         date: 'August 15, 2025',
         tags: ['websites', 'collection', 'resources'],

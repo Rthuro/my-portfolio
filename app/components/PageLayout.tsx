@@ -21,7 +21,7 @@ export function PageLayout({ children, headers, socialLinks }: PageLayoutProps) 
                 {socialLinks}
             </div>}
         </div>
-        <div className="relative w-[90%] md:w-[50%] flex flex-col gap-8 mx-auto">
+        <div className="relative w-[90%] md:w-[50%] flex flex-col gap-6 mx-auto">
             {headers}
             {children}
         </div>

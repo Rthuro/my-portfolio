@@ -13,7 +13,6 @@ interface ProjectPageProps {
 export default async function ProjectPage({ params, }: ProjectPageProps) {
     const { project: id } = await params;
     const project = allProjects.find(p => p.id == id);
-    console.log(id)
     return (
         <PageLayout
             headers={
