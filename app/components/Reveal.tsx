@@ -16,7 +16,7 @@ export function Reveal({ children }: RevealProps) {
     // Begin the reveal after a short loading pause
     const timer = setTimeout(() => {
       setIsRevealing(true)
-    }, 500)
+    }, 800)
     return () => clearTimeout(timer)
   }, [])
 
@@ -27,7 +27,8 @@ export function Reveal({ children }: RevealProps) {
         {!isRevealing && (
           <motion.div
             key="loader"
-            className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-800"
+            className="fixed inset-0 z-50 flex items-center justify-center
+             bg-zinc-800"
             exit={{
               clipPath: [
                 'circle(150% at 100% 100%)',
@@ -65,7 +66,7 @@ export function Reveal({ children }: RevealProps) {
             key="content"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            transition={{  ease: 'easeIn' }}
           >
             {children}
           </motion.div>
