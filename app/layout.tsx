@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AsciiSplash from "./components/AsciiSplash";
-import SplashCursor from './components/SplashCursor'
 import {Footer} from './components/Footer';
 import { Reveal } from "./components/Reveal";
+import { Analytics } from '@vercel/analytics/next';
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -32,11 +31,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${montserrat.variable} ${geistMono.variable} h-full antialiased`}
     >
       <link rel="icon" type="image/svg" href="/icon.svg" />
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col py-12">
         <Reveal>
           {children}
         </Reveal>
         {/* <Footer /> */}
+        <Analytics />
       </body>
     </html>
   );
