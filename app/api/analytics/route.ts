@@ -23,8 +23,9 @@ export async function GET(request: Request) {
   // Filter visits for your homepage
   if(type === 'visitors'){
     url.searchParams.set("filter", "requestPath eq '/'");
-  } else if(type === 'current-visitors'){
+  } else {
     url.searchParams.set("since", new Date().toISOString().split('T')[0]);
+    url.searchParams.set("until", new Date().toISOString().split('T')[0]);
   }
 
   const res = await fetch(url.toString(), {
