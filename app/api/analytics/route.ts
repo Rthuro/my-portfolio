@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 
-export async function GET(type: 'visitors' | 'current-visitors') {
+export async function GET(request: Request) {
   const projectId = process.env.VERCEL_PROJECT_ID;
   const token = process.env.VERCEL_TOKEN;
+
+  const { searchParams } = new URL(request.url)
+  const type = searchParams.get('type')
 
   if (!projectId || !token) {
     return NextResponse.json(
