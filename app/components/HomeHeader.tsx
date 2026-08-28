@@ -2,6 +2,8 @@
 import {motion} from "framer-motion"
 import { IconEnvelope, IconFileContentFill24, IconGithub, IconLaptop, IconLinkedin } from "../assets/icons"
 import Link from "next/link"
+import { PortfolioAnalytics } from "../components/PortfolioAnalytics";
+import { ChevronsLeftRight } from "lucide-react"
 
 export function HomeHeader () {
     return <motion.section
@@ -37,6 +39,10 @@ export function HomeHeader () {
                 <IconLinkedin size="16px" />
                 LinkedIn
               </Link>
+            </div>
+            <div className="grid grid-cols-2 w-full gap-4">          
+            <PortfolioAnalytics type='visitors'/>
+            <PortfolioAnalytics type='current-visitors'/>
             </div>
         </motion.section>
 } 
