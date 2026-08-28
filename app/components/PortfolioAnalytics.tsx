@@ -30,7 +30,7 @@ export function PortfolioAnalytics({ type }: Type) {
                         ))}
                     </div>
 
-                    <p className=" text-zinc-700 text-sm">
+                    <p className=" text-zinc-700 text-sm text-center">
                         <span className="text-zinc-900 font-bold mr-1">{visit ?? "..."}</span> total visits
                     </p>
                 </div>
@@ -52,7 +52,7 @@ export function PortfolioAnalytics({ type }: Type) {
                         )}
 
                     </div>
-                    <p className=" text-zinc-200 text-sm">
+                    <p className=" text-zinc-200 text-sm text-center">
                         <span className="text-white font-bold mr-1">{visit ?? "..."}</span> people viewed today
                     </p>
                 </div>
