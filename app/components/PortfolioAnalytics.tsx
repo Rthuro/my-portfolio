@@ -53,7 +53,7 @@ export function PortfolioAnalytics({ type }: Type) {
 
                     </div>
                     <p className=" text-zinc-200 text-sm">
-                        <span className="text-white font-bold mr-1">{visit ?? "..."}</span> people viewing now
+                        <span className="text-white font-bold mr-1">{visit ?? "..."}</span> people viewed today
                     </p>
                 </div>
             )}
