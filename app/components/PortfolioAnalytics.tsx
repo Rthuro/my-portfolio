@@ -47,7 +47,7 @@ export function PortfolioAnalytics({ type }: Type) {
             {type === 'current-visitors' && (
                 <div className="flex flex-wrap items-center justify-center gap-3 bg-zinc-200 border border-zinc-800 p-4 md:p-5 rounded-3xl">
                     <div className="flex gap-0.5">
-                        {(visit > 0) && memoji.slice(0, 3).map((mem, idx) => (
+                        { memoji.slice(0, 3).map((mem, idx) => (
                             <img key={idx} src={mem.src} alt="mem" className={`size-10 md:size-12 object-center rounded-full p-1 border-2 border-white bg-zinc-100 ${idx == 0 || idx == 2 ? "mt-3" : ""} `} />
 
                         ))}
