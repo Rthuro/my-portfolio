@@ -1,6 +1,8 @@
 'use client'
 import { useState } from "react"
 import { MailCheck, MailQuestionMark } from "lucide-react"
+import { IconEnvelope } from "../assets/icons"
+import Link from "next/link"
 
 const inputStyle = "outline-none focus:ring-1 focus:ring-accent-amber-500/80 focus:border-accent-amber-500/80  border border-zinc-800 p-2 rounded-lg bg-zinc-800 text-sm placeholder:text-zinc-500"
 
@@ -107,19 +109,28 @@ export function ContactForm({ emailType }: { emailType: string }) {
                             <p>Message failed to send. Please try again later.</p>
                         </div>
                     )}
-                    <div className="flex items-center gap-2">
-                        <button className={`${type === 'general' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
-                            onClick={() => setType('general')}
-                        >
-                            General
-                        </button>
-                        <span className="text-zinc-500">|</span>
-                        <button className={`${type === 'freelance' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
-                            onClick={() => setType('freelance')}
-                        >
-                            Freelance
-                        </button>
+
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                            <button className={`${type === 'general' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
+                                onClick={() => setType('general')}
+                            >
+                                General
+                            </button>
+                            <span className="text-zinc-500">|</span>
+                            <button className={`${type === 'freelance' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
+                                onClick={() => setType('freelance')}
+                            >
+                                Freelance
+                            </button>
+                        </div>
+                        <Link 
+                            href="mailto:oribelloruthiemy@gmail.com" className="py-2 px-4 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white  flex items-center justify-center gap-2 rounded hover:brightness-110 transition-all duration-300 text-xs outline outline-zinc-600">
+                            <IconEnvelope size="16px" />
+                            oribelloruthiemy@gmail.com
+                        </Link>
                     </div>
+                    
                     <div className="border border-zinc-800 p-4 rounded-xl flex flex-col gap-3">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                             <input type="text" className={inputStyle} placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
@@ -137,11 +148,11 @@ export function ContactForm({ emailType }: { emailType: string }) {
                         }
                         <input type="text" className={inputStyle} placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                         <textarea className={inputStyle} rows={4} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                        <button className="mt-2 py-3 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-1 rounded-lg hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-400 border border-zinc-600" 
+                        <button className="mt-2 py-3 px-4 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-2 rounded hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-600 cursor-pointer" 
                         onClick={handleSubmit}
                         disabled={loader}
                         >
-                            {loader ? 'Sending...' : 'Send'}
+                            {loader ? 'Sending...' : 'Send Message'}
                         </button>
                     </div>
                 </div>
