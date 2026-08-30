@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react"
-import { MailCheck, MailQuestionMark } from "lucide-react"
-import { IconEnvelope } from "../assets/icons"
+import { ArrowUpRight, MailCheck, MailQuestionMark } from "lucide-react"
 import Link from "next/link"
 
 const inputStyle = "outline-none focus:ring-1 focus:ring-accent-amber-500/80 focus:border-accent-amber-500/80  border border-zinc-800 p-2 rounded-lg bg-zinc-800 text-sm placeholder:text-zinc-500"
@@ -111,6 +110,12 @@ export function ContactForm({ emailType }: { emailType: string }) {
                     )}
 
                     <div className="flex items-center flex-wrap justify-between gap-2">
+                        <Link 
+                            href="mailto:oribelloruthiemy@gmail.com" className="flex items-center text-sm gap-1 text-zinc-300">
+                            Email: <span className="text-zinc-100 underline decoration-dotted decoration-zinc-500 underline-offset-3 decoration-1">oribelloruthiemy@gmail.com</span>
+                            <ArrowUpRight size="16px" />
+                        </Link>
+
                         <div className="flex items-center gap-2">
                             <button className={`${type === 'general' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
                                 onClick={() => setType('general')}
@@ -124,11 +129,7 @@ export function ContactForm({ emailType }: { emailType: string }) {
                                 Freelance
                             </button>
                         </div>
-                        <Link 
-                            href="mailto:oribelloruthiemy@gmail.com" className="py-2 px-4 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white  flex items-center justify-center gap-2 rounded hover:brightness-110 transition-all duration-300 text-xs outline outline-zinc-600">
-                            <IconEnvelope size="16px" />
-                            oribelloruthiemy@gmail.com
-                        </Link>
+                        
                     </div>
                     
                     <div className="border border-zinc-800 p-4 rounded-xl flex flex-col gap-3">
