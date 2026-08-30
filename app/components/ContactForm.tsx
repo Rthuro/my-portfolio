@@ -110,7 +110,7 @@ export function ContactForm({ emailType }: { emailType: string }) {
                         </div>
                     )}
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center flex-wrap justify-between gap-2">
                         <div className="flex items-center gap-2">
                             <button className={`${type === 'general' ? 'text-white' : 'text-zinc-500'} cursor-pointer`}
                                 onClick={() => setType('general')}
@@ -148,7 +148,7 @@ export function ContactForm({ emailType }: { emailType: string }) {
                         }
                         <input type="text" className={inputStyle} placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                         <textarea className={inputStyle} rows={4} placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                        <button className="mt-2 py-3 px-4 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-2 rounded hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-600 cursor-pointer" 
+                        <button className="mt-2 py-3 px-4 bg-gradient-to-t from-zinc-800 to-zinc-400 text-white font-medium flex items-center justify-center gap-2 rounded-lg hover:brightness-110 transition-all duration-300 text-sm outline outline-zinc-600 cursor-pointer" 
                         onClick={handleSubmit}
                         disabled={loader}
                         >
