@@ -16,14 +16,14 @@ export function HomeHeader () {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5, ease: 'easeOut' }}
             className="flex flex-col gap-2">
-              <p className=" font-bold text-3xl flex items-center gap-2">
+              <p className=" font-bold text-xl md:text-3xl flex items-center gap-2">
                 <IconLaptop size="24px" color="#ffff" />
                 Ruthiemy Oribello
               </p>
-              <p className=" font-medium font-mono text-zinc-200">
+              <p className=" font-medium font-mono text-zinc-200 text-sm md:text-md">
                 Full Stack Developer | Web Designer | UI/UX
               </p>
-              <p className="text-sm text-zinc-400 text-justify">I'm a Full Stack Developer with 2+ years of experience in web development. Love designing minimal and modern user interfaces. Currently interested in AI integration, Automation and AWS. Soon i'll dig dive into mobile development and design engineering.
+              <p className="text-xs md:text-sm text-zinc-400 text-justify">I'm a Full Stack Developer with 2+ years of experience in web development. Love designing minimal and modern user interfaces. Currently interested in AI integration, Automation and AWS. Soon i'll dig dive into mobile development and design engineering.
               </p>
             </motion.div>
             <div className="grid grid-cols-2 gap-2 border-y border-zinc-900 py-3 ">

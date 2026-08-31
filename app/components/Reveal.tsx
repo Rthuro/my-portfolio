@@ -28,7 +28,7 @@ export function Reveal({ children }: RevealProps) {
           <motion.div
             key="loader"
             className="fixed inset-0 z-50 flex items-center justify-center
-             bg-zinc-800"
+             bg-zinc-700"
             exit={{
               clipPath: [
                 'circle(150% at 100% 100%)',
@@ -49,9 +49,9 @@ export function Reveal({ children }: RevealProps) {
                         delay: 0.8,
                         ease: 'easeOut',
                     }}
-             className="flex flex-col items-center gap-6">
-               <img src={img.src} alt="" className='size-24 rounded-lg ' />
-               <p className="font-mono text-zinc-300">
+             className="flex flex-col items-center gap-4">
+               <img src={img.src} alt="" className='size-32 rounded-xl outline-1 outline-zinc-500 border-2 border-zinc-700' />
+               <p className="font-mono text-zinc-200">
                 Loading...
                </p>
            </motion.div>
