@@ -14,9 +14,9 @@ import { HomeHeader } from "./components/HomeHeader";
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center text-zinc-200 gap-24 ">
-      <div className="fixed top-4 left-4 right-4  ">
-        {/* nav bar */}
-      </div>
+      {/* <div className="fixed top-4 left-4 right-4  ">
+      </div> */}
+      
       <HomeHeader />
 
       <Section

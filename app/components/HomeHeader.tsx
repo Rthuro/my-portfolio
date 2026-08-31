@@ -10,20 +10,20 @@ export function HomeHeader () {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-           className="w-[90%] md:w-[40%] mx-auto flex flex-col  mt-24  gap-6">
+           className="w-[90%] md:w-[40%] mx-auto flex flex-col  gap-6">
             <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5, ease: 'easeOut' }}
             className="flex flex-col gap-2">
-              <p className=" font-bold text-lg flex items-center gap-1">
-                <IconLaptop size="16px" color="#ffff" />
+              <p className=" font-bold text-3xl flex items-center gap-2">
+                <IconLaptop size="24px" color="#ffff" />
                 Ruthiemy Oribello
               </p>
               <p className=" font-medium font-mono text-zinc-200">
                 Full Stack Developer | Web Designer | UI/UX
               </p>
-              <p className="text-sm text-zinc-400 text-justify">I'm a Full Stack Developer with 2+ years of experience in web development. Love designing minimal but modern user interfaces. Currently interested in AI integration, Automation and AWS. Soon i'll dig dive into mobile development and design engineering.
+              <p className="text-sm text-zinc-400 text-justify">I'm a Full Stack Developer with 2+ years of experience in web development. Love designing minimal and modern user interfaces. Currently interested in AI integration, Automation and AWS. Soon i'll dig dive into mobile development and design engineering.
               </p>
             </motion.div>
             <div className="grid grid-cols-2 gap-2 border-y border-zinc-900 py-3 ">
