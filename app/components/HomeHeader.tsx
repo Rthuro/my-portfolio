@@ -36,7 +36,7 @@ export function HomeHeader ({id}: {id: string}) {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-           className="w-[90%] lg:w-[55%] mx-auto flex flex-col gap-6 scroll-mt-24 mt-24" id={id}>
+           className="w-[90%] lg:w-[55%] mx-auto flex flex-col gap-6 scroll-mt-24 mt-42" id={id}>
             <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
