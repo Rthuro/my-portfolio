@@ -21,8 +21,10 @@ export function Navbar() {
     const activeSection = useActiveSection(["about", "blog", "projects", "experience", "certificates", "tech-stack", "github", "contact"]);
 
     return(
-        <div className="fixed bottom-6 w-fit flex items-center gap-2 py-2 px-3 bg-black/70 border border-zinc-800  rounded-xl z-50">
-            <Link 
+        <div className="fixed top-6 w-fit flex flex-col items-center gap-2  z-50">
+            <p className="font-mono text-[10px] uppercase tracking-wider animate-pulse text-zinc-300">{activeSection}</p>
+            <div className="flex items-center gap-2 py-2 px-3 bg-black/70 border border-zinc-800 rounded-xl">
+                <Link 
             href="#about" 
            >
                 <img src={img.src} alt=""
@@ -33,10 +35,12 @@ export function Navbar() {
             return <Link 
             href={`#${navLink.href}`} 
             key={idx}
-            className={`${navLink.href === activeSection ? "bg-zinc-700/70" : "bg-none"} rounded-md p-1.5 transition-colors delay-75 ease-in`}>
+            className={`${navLink.href === activeSection ? "bg-zinc-700/80" : "bg-none"} rounded-md p-1.5 transition-colors delay-75 ease-in`}>
                 <Icon size="18"  className="" />
             </Link>
            })}
+            </div>
+            
       </div>
     )
 }

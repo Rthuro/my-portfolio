@@ -14,7 +14,7 @@ import { Navbar } from "./components/Navbar";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col items-center text-zinc-200 gap-24 ">
+    <main className="w-full flex flex-col items-center text-zinc-200 gap-32 ">
 
       <Navbar />
       
