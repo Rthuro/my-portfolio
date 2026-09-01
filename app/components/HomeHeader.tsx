@@ -113,7 +113,7 @@ export function HomeHeader ({id}: {id: string}) {
                 </motion.div>
               ))}
             </div>
-            <motion.div className="grid grid-cols-2 w-full gap-4">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 w-full gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
