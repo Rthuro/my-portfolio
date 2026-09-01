@@ -8,7 +8,7 @@ import { SquareTextIcon, Laptop, Briefcase, Award, Braces, Phone, Monitor } from
 import { link } from "fs";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
     { img: img.src, icon: '', href: "about", link: "#about" },
@@ -45,12 +45,13 @@ export function Navbar() {
                     </div>
                 ))}
 
+                <AnimatePresence>
                 {openMenu &&
                     <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.7, ease: "easeOut" }}
+                        exit={{ opacity: 0, height: 0, transition: { delay: 0.4, ease: "easeIn" } }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         className="absolute top-14 left-0 right-0 flex flex-col items-center gap-1 bg-black/90 border border-zinc-800 p-1.5 rounded-xl "
                     >
                         {navLinks.map((navLink, idx) => {
@@ -59,7 +60,8 @@ export function Navbar() {
                                 key={idx}
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.1 }}
+                                exit={{ opacity: 0, y: 10, transition: { delay: (navLinks.length - 1 - idx) * 0.12 } }}
+                                transition={{ delay: idx * 0.12 }}
                                 className="w-full"
                             >
                                 <Link
@@ -74,6 +76,7 @@ export function Navbar() {
 
                     </motion.div>
                 }
+                </AnimatePresence>
             </div>
 
         </div>
