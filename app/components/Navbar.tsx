@@ -17,7 +17,7 @@ const navLinks = [
     { img: '', icon: Briefcase, href: "experience", link: "/experience" },
     { img: '', icon: Braces, href: "tech-stack", link: "/stack" },
     { img: '', icon: Award, href: "certificates", link: "#certificates" },
-    { img: '', icon: IconGithub, href: "github", link: "#contact" },
+    { img: '', icon: IconGithub, href: "github", link: "#github" },
     { img: '', icon: Phone, href: "contact", link: "/contact" },
     { img: '', icon: Monitor, href: "gear", link: "/gear" },
 ];
