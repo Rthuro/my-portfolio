@@ -27,7 +27,7 @@ export default async function Blog({ params }: BlogProps) {
                       w-full" 
                      href={blog.link} target="_blank">
                         <Globe size={14} />
-                        View Blog
+                        View
                     </Link>
                 )}
                 </div>

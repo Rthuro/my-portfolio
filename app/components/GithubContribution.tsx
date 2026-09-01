@@ -109,7 +109,7 @@ export default function GithubContribution() {
   }
 
   return (
-    <div className="w-full rounded-lg border border-zinc-800/60 bg-zinc-950/80 p-4 backdrop-blur-sm overflow-hidden relative">
+    <div className="w-full md:w-fit rounded-lg border border-zinc-800/60 bg-zinc-950/80 p-4 backdrop-blur-sm overflow-hidden relative">
       {/* Scanline overlay for cyberpunk feel */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(202,102,255,0.1)_2px,rgba(202,102,255,0.1)_4px)]" />
       

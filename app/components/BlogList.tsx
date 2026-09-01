@@ -47,10 +47,10 @@ export const BlogList = ({location}: BlogsProps) => {
             ))}
             </motion.div>
             ):  (
-                <div className="grid grid-cols-2 gap-6 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                     {blogArr.map( (blog, index) => (
                         <Link href={`/blogs/${blog.id}`} key={index} className=" flex flex-col gap-2 group">
-                            <img src={blog.image} alt="" className="w-full h-[150px] object-cover rounded-xl border group-hover:opacity-80 transition-all duration-300" />
+                            <img src={blog.image} alt="" className="w-full h-[250px] object-top object-cover rounded-xl border group-hover:opacity-80 transition-all duration-300 border-zinc-600" />
                             <p className="text-xs text-zinc-400 font-mono mt-2">{blog.date}</p>
                             <p className="text-lg font-semibold group-hover:text-zinc-400 ">{blog.title}</p>
                             <p className="text-xs text-justify text-zinc-400 ">{blog.description}</p>

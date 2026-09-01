@@ -3,14 +3,13 @@ import {motion} from "framer-motion"
 import { IconEnvelope, IconFileContentFill24, IconGithub, IconLaptop, IconLinkedin } from "../assets/icons"
 import Link from "next/link"
 import { PortfolioAnalytics } from "../components/PortfolioAnalytics";
-import { ChevronsLeftRight } from "lucide-react"
 
-export function HomeHeader () {
+export function HomeHeader ({id}: {id: string}) {
     return <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-           className="w-[90%] md:w-[40%] mx-auto flex flex-col  gap-6">
+           className="w-[90%] md:w-[40%] mx-auto flex flex-col gap-6 scroll-mt-24" id={id}>
             <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

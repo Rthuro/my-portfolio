@@ -12,7 +12,7 @@ export const ProjectCarousel = () => {
     }, [WheelGesturesPlugin()])
 
     return (
-        <div className="overflow-hidden w-[calc(100vw-3rem)] text-sm pt-0" ref={emblaRef}>
+        <div className="overflow-hidden w-[calc(100vw-2rem)] text-sm pt-0" ref={emblaRef}>
             <div className="flex gap-2 md:px-6">
                 {featuredProjects.map((proj, idx) => (
                     <div className="flex-[0_0_auto]" key={idx}>

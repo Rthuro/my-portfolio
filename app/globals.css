@@ -23,6 +23,9 @@
   }
 } */
  
+:root{
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--color-surface);

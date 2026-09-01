@@ -10,22 +10,25 @@ import { CertificateCard } from "./components/CertificateCard";
 import { certificates } from "./data/certificates";
 import { ExperienceList } from "./components/ExperienceList";
 import { HomeHeader } from "./components/HomeHeader";
+import { Navbar } from "./components/Navbar";
 
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center text-zinc-200 gap-24 ">
-      {/* <div className="fixed top-4 left-4 right-4  ">
-      </div> */}
+
+      <Navbar />
       
-      <HomeHeader />
+      <HomeHeader id="about" />
 
       <Section
+        id="blog"
         header={<SectionHeader title="01 - Blogs" link="/blogs" />}
         children={<BlogList location="home" />}
       />
 
       <section className="flex flex-col items-center gap-4 overflow-hidden w-full ">
         <Section
+        id="projects"
           header={<SectionHeader title="02 - Projects" link="/projects" />
           }
         />
@@ -33,12 +36,14 @@ export default function Home() {
       </section>
 
       <Section
+      id="experience"
         header={<SectionHeader title="03 - Experience" link="/experience" />}
         children={<ExperienceList location="home" />}
       />
 
       <section className="flex flex-col items-center gap-4 w-full">
         <Section
+        id="tech-stack"
           header={<SectionHeader title="04 - Tech Stack" link="/stack" />}
         />
         <TechStack />
@@ -46,6 +51,7 @@ export default function Home() {
 
 
       <Section
+      id="certificates"
         header={<SectionHeader title="05 - Certifications" link="/certificates" hasSectionLink={false} />}
         children={
           <div className="grid grid-cols-2 gap-4 w-full">
@@ -57,11 +63,13 @@ export default function Home() {
       />
 
       <Section
+      id="github"
         header={<SectionHeader title="06 - Github" link="https://github.com/Rthuro" viewLabel="@Rthuro" />}
         children={<GithubContribution />}
       />
 
       <Section
+      id="contact"
         header={<SectionHeader title="07 - Contact" link="" hasSectionLink={false} />}
         children={
           <div className="flex flex-col items-center justify-center py-12 rounded-xl gap-3 border border-zinc-800 w-full  bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(255,255,255,0.04)_4px,transparent_9px)] shadow-md shadow-accent-dark/20">
