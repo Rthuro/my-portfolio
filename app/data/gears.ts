@@ -39,12 +39,12 @@ export const gears : Gear[] = [
         img: monitor.src,
         link: "",
         name: "LG 25MS500-B 75HZ/100Hz 24.5 inch IPS Monitor with AMD FreeSync",
-        experience: "got broke 2 times because of the hinge but still works. can't carry heavy tasks anymore, but it gets the job done",
+        experience: "2+ years and still works",
     }, {
         id: "table",
         img: table.src,
         link: "",
-        name: "Foldable Table 60*120cm from fb marketplace",
-        experience: "2+ years and still works",
+        name: "Foldable Table 60*120cm",
+        experience: "spacious. got this for 1k only at fb marketplace",
     },
 ]
