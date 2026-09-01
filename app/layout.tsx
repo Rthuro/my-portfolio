@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${montserrat.variable} ${geistMono.variable} h-full antialiased`}
     >
       <link rel="icon" type="image/svg" href="/icon.svg" />
-      <body className="min-h-full flex flex-col pt-12 pb-64">
+      <body className="min-h-full flex flex-col pt-2 pb-64">
         <Reveal>
           {children}
         </Reveal>

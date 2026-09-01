@@ -145,7 +145,7 @@ export const TechStack = () => {
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, ease: 'easeOut' }}
-    className="relative overflow-hidden space-y-3  md:w-[90%] w-full mx-auto">
+    className="relative overflow-hidden space-y-3  md:w-[80%] w-full mx-auto">
         <div
             className="
       pointer-events-none
