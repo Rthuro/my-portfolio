@@ -22,7 +22,7 @@ export function PortfolioAnalytics({ type }: Type) {
     return (
         <>
             {type === 'visitors' && (
-                <div className="flex flex-col items-center justify-center gap-3 bg-zinc-900 border border-zinc-800 py-5 md:py-6 rounded-3xl h-full">
+                <div className="flex flex-col items-center justify-center gap-3 bg-zinc-900 border border-zinc-800 px-2 py-5 md:py-6 rounded-3xl h-full">
                     <div className="flex items-end">
                         <div className="flex items-center">
                             {(visit > 0) && memoji.slice(0, visit > 5 ? 5 : visit).map((mem, idx) => (
@@ -45,7 +45,7 @@ export function PortfolioAnalytics({ type }: Type) {
             )}
 
             {type === 'current-visitors' && (
-                <div className="flex flex-col items-center justify-center gap-3 bg-zinc-200 border border-zinc-800 py-5 md:py-6 rounded-3xl h-full">
+                <div className="flex flex-col items-center justify-center gap-3 bg-zinc-200 border border-zinc-800 px-2 py-5 md:py-6 rounded-3xl h-full">
                     <div className="flex gap-0.5">
                         { memoji.slice(0, 3).map((mem, idx) => (
                             <img key={idx} src={mem.src} alt="mem" className={`size-10 md:size-12 object-center rounded-full p-1 border-2 border-white bg-zinc-100 ${idx == 0 || idx == 2 ? "mt-3" : ""} `} />
