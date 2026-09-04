@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
+      from: "Ruth <portfolio@ruthiemyoribello.tech>",
       to: ["oribelloruthiemy@gmail.com"],
       replyTo: email,
       subject: subject || `New message from ${name}`,
@@ -46,6 +46,21 @@ ${message}
         { status: 500 }
       );
     }
+
+    // Send confirmation email to the sender
+    await resend.emails.send({
+      from: "Ruth <portfolio@ruthiemyoribello.tech>",
+      to: email,
+      replyTo: "oribelloruthiemy@gmail.com",
+      subject: "Message received — thank you!",
+      text: `Hi ${name},
+
+Thank you for reaching out! I've received your message and will get back to you as soon as possible.
+
+Best regards,
+Ruthiemy Oribello
+      `,
+    });
 
     return NextResponse.json(
       { success: true, data },
