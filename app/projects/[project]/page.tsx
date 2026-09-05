@@ -36,6 +36,13 @@ export default async function ProjectPage({ params, }: ProjectPageProps) {
                                     Live
                                 </Link>
                             )}
+
+                            {project.links.screens && (
+                                <Link className="flex-1 flex items-center justify-center gap-2 bg-zinc-50 rounded-lg px-2 py-3 text-zinc-900 text-sm font-medium" href={project.links.live} target="_blank">
+                                    <Globe size={14} />
+                                    Figma Screens
+                                </Link>
+                            )}
                         </div>
                     )}
 
