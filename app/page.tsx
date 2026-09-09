@@ -22,7 +22,7 @@ export default function Home() {
 
       <Section
         id="blog"
-        header={<SectionHeader title="01 - Blogs" link="/blogs" />}
+        header={<SectionHeader title="01 - Micro-Blogs" link="/blogs" />}
         children={<BlogList location="home" />}
       />
 
