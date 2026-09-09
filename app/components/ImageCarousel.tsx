@@ -21,7 +21,7 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
             <div className="overflow-hidden w-full text-sm pt-0" ref={emblaRef}>
                 <div className="flex gap-0.5 ">
                     {images.map((img, idx) => (
-                        <div className="relative flex-[0_0_auto] h-auto" key={idx}>
+                        <div className="relative flex-[0_0_auto] h-[450px]" key={idx}>
                             <button type='button' 
                             onClick={() => setPreviewImage(img)}
                             className="absolute top-2 right-2 p-2 bg-zinc-800/80 text-white rounded">
