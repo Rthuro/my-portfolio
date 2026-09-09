@@ -10,7 +10,18 @@ interface Blog {
     text: React.ReactNode;
 }
 
-export const blogs : Blog[] = [
+export const blogs : Blog[] = [ 
+    {
+        title: 'Free SMS Gateway | Twilio Alternative  ',
+        id: 'sms-gateway',
+        description: 'Open source SMS gateway I used in our thesis for SMS notification and reminder.',
+        date: 'September 5, 2026',
+        tags: ['sms-gateway', 'open-source', 'backend', 'sms', "Next.js"],
+        image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1788975072/Instagram_post_-_13.jpg',
+        link: 'https://www.tiktok.com/@ruth.codes/photo/7681748404367576340',
+        isFeatured: true,
+        text: ""     
+    },
     {
         title: 'Web Analytics using Vercel',
         id: 'web-analytics',
