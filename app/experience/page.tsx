@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { PageLayout } from "../components/PageLayout";
 import { PageHeaders } from "../components/PageHeaders";
 import { experiences } from "../data/experiences";
+
+export const metadata: Metadata = {
+    title: "Experience",
+    description: "Timeline of Ruthiemy Oribello's professional journey — full-stack development, web design, and software engineering roles.",
+    alternates: { canonical: "/experience" },
+};
+
 
 function getInitials(company: string) {
     return company.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();

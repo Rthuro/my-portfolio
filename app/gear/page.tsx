@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { PageLayout } from "../components/PageLayout"
 import { PageHeaders } from "../components/PageHeaders"
 import img from "../assets/gear/gear.jpg"
 import { gears } from "../data/gears"
+
+export const metadata: Metadata = {
+    title: "Gear",
+    description: "The tools and gear that help Ruthiemy Oribello's journey as a developer — hardware, peripherals, and everyday essentials.",
+    alternates: { canonical: "/gear" },
+};
+
 
 export default function Gear() {
     return (

@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import { PageHeaders } from "../components/PageHeaders";
 import { PageLayout } from "../components/PageLayout";
 import { allProjects } from "../data/projects";
 import Link from "next/link";
 import { IconGithub } from "../assets/icons";
 import { Globe } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "A collection of web development and design projects built by Ruthiemy Oribello — featuring React, Next.js, and full-stack applications.",
+    alternates: { canonical: "/projects" },
+};
+
 
 export default function Projects() {
     return <PageLayout

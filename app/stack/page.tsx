@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { PageLayout } from "../components/PageLayout";
 import { PageHeaders } from "../components/PageHeaders";
 import { Stacks } from "../data/stacks";
+
+export const metadata: Metadata = {
+    title: "Tech Stack",
+    description: "Technologies and tools used by Ruthiemy Oribello — from frontend frameworks to backend services and deployment platforms.",
+    alternates: { canonical: "/stack" },
+};
+
 
 export default function Stack () {
     return (
