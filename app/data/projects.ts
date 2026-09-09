@@ -18,6 +18,7 @@ export interface Project {
     live?: string;
     github?: string;
     video?: string;
+    screens?: string;
   };
   role?: string;
   outcome?: string;
@@ -96,7 +97,7 @@ export const developmentProjects: Project[] = [
     image: 'https://res.cloudinary.com/rdnkuxzj/image/upload/v1786978752/wmsu-sports-1.png',
     role: 'Full-Stack Developer',
     outcome: 'Delivered a clean, intuitive interface that handles real-time state synchronization across multiple users.',
-    links: { github: 'https://github.com/Rthuro/WMSU-Sports-Scoring-System', live: '#' },
+    links: { github: 'https://github.com/Rthuro/WMSU-Sports-Scoring-System' },
     isFeatured: true,
   },
   {
@@ -155,6 +156,7 @@ export const designProjects: Project[] = [
     role: 'UI/UX Designer',
     outcome: 'Proposed UI/UX design was approved by the panelist on initial project defense of Software Engineering Course Final Project and can proceed to the actual development',
     lessonsLearned: 'Learned the importance of progressive disclosure — showing users only what they need at each step rather than overwhelming them.',
+    links: { screens: "https://www.figma.com/design/ijPhJRSZlnjCXXQDshH2ci/Portfolio?node-id=2004-23173&p=f&t=qHFkE01RABZH0SGy-0" },
     isFeatured: true,
   },
   {
